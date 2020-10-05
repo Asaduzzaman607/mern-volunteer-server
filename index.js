@@ -22,6 +22,7 @@ const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 client.connect((err) => {
   const rawData = client
     .db(`${process.env.DB_NAME}`)
