@@ -29,7 +29,7 @@ client.connect((err) => {
     .collection(`${process.env.DB_COLLECTION}`);
   const taskLists = client.db(`${process.env.DB_NAME}`).collection("taskLists");
 
-  app.post("/addToRawData", (req, res) => {
+  app.post("/addToData", (req, res) => {
     const task = req.body;
     console.log(task);
     rawData.insertOne(task).then((result) => {
