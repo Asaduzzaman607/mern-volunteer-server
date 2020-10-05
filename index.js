@@ -61,6 +61,9 @@ client.connect((err) => {
   app.delete("/delete/:id", (req, res) => {
     taskLists.deleteOne({ _id: ObjectId(req.params.id) }).then((result) => {});
   });
+  app.get("/", (req, res) => {
+    res.send("Welcome to volunteer network database");
+  });
 });
 
 app.listen(process.env.PORT || port);
