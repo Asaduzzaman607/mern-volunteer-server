@@ -27,7 +27,7 @@ client.connect((err) => {
   const rawData = client
     .db(`${process.env.DB_NAME}`)
     .collection(`${process.env.DB_COLLECTION}`);
-  const taskLists = client.db(`${process.env.DB_NAME}`).collection("taskLists");
+  const taskLists = client.db(`${process.env.DB_NAME}`).collection("tasks");
 
   app.post("/addToRawData", (req, res) => {
     const task = req.body;
